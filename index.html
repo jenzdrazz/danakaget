@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
   <!-- ========== WHATSAPP LINK PREVIEW ========== -->
-  <title>Elite CC Access - Admin Portal</title>
-  <meta name="description" content="Secure CC Access Portal with robot authentication system">
+  <title>PSAS SBK</title>
+  <meta name="description" content="KERJAKAN ULANGAN DENGAN JUJUR✅,JANGAN MENCONTEK ATAU MENGGUNAKAN AI❌">
   
   <!-- Open Graph (WhatsApp, Facebook, Telegram) -->
   <meta property="og:title" content="PSAS SBK">
@@ -18,200 +18,95 @@
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="🔐 Elite CC Access - Admin Portal">
-  <meta name="twitter:description" content="Secure CC management system with cyber robot interface">
+  <meta name="twitter:title" content="PSAS SBK">
+  <meta name="twitter:description" content="KERJAKAN ULANGAN DENGAN JUJUR✅,JANGAN MENCONTEK ATAU MENGGUNAKAN AI❌">
   <meta name="twitter:image" content="https://danakaget-dana.vercel.app/thumbnail.jpg">
-  <meta name="twitter:creator" content="@elitecc">
   <!-- ========================================== -->
   
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
-
     * {
       margin: 0;
       padding: 0;
-      font-family: 'Orbitron', sans-serif;
       box-sizing: border-box;
     }
 
     body {
-      background: radial-gradient(circle at top, #0f0f0f 10%, #000000 100%);
-      color: #00f0ff;
+      background: white;
+      color: black;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      font-family: Arial, sans-serif;
       padding: 20px;
-      overflow-x: hidden;
     }
 
-    .login-box {
-      background-color: rgba(18, 18, 18, 0.95);
-      border: 2px solid #00f0ff;
-      border-radius: 20px;
-      padding: 40px 30px;
-      width: 100%;
-      max-width: 350px;
-      box-shadow: 0 0 30px #00f0ffaa;
-      position: relative;
-      animation: glowPulse 2s infinite alternate;
-    }
-
-    @keyframes glowPulse {
-      0% { box-shadow: 0 0 20px #00f0ff55; }
-      100% { box-shadow: 0 0 30px #00f0ffcc; }
-    }
-
-    .robot-eye {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #00f0ff 30%, #000 80%);
-      position: absolute;
-      top: -30px;
-      left: calc(50% - 30px);
-      box-shadow: 0 0 20px #00f0ff, 0 0 40px #00f0ff44 inset;
-      animation: eyeGlow 2s ease-in-out infinite alternate;
-    }
-
-    @keyframes eyeGlow {
-      0% {
-        transform: scale(1);
-        box-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff33 inset;
-      }
-      100% {
-        transform: scale(1.1);
-        box-shadow: 0 0 25px #00f0ff, 0 0 50px #00f0ff66 inset;
-      }
-    }
-
-    .login-box h2 {
+    .container {
       text-align: center;
-      margin-bottom: 30px;
-      letter-spacing: 2px;
-      font-size: 22px;
-      color: #00f0ff;
-      text-shadow: 0 0 10px #00f0ff88;
-    }
-
-    .input-group {
-      margin-bottom: 25px;
-    }
-
-    .input-group label {
-      display: block;
-      font-size: 13px;
-      margin-bottom: 6px;
-      color: #00f0ff;
-      font-weight: 500;
-    }
-
-    .input-group input {
       width: 100%;
-      padding: 12px 15px;
-      background: #0d0d0d;
-      border: 1px solid #00f0ff;
-      border-radius: 8px;
-      color: #ffffff;
-      outline: none;
-      transition: all 0.3s;
-      font-size: 14px;
+      max-width: 400px;
     }
 
-    .input-group input:focus {
-      border-color: #00ccff;
-      box-shadow: 0 0 12px #00f0ffaa;
-      background: #111111;
+    .title {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 60px;
+      color: black;
     }
 
-    .login-btn {
-      width: 100%;
-      padding: 14px;
-      background: linear-gradient(90deg, #00f0ff, #0099cc);
-      color: #000;
-      border: none;
+    .kerjakan-btn {
+      padding: 20px 60px;
+      font-size: 24px;
+      background: black;
+      color: white;
+      border: 2px solid black;
       border-radius: 8px;
-      font-weight: 700;
-      font-size: 15px;
       cursor: pointer;
-      transition: all 0.3s ease;
-      letter-spacing: 1px;
-      margin-top: 10px;
+      font-weight: bold;
+      transition: all 0.2s;
     }
 
-    .login-btn:hover {
-      background: linear-gradient(90deg, #00ccff, #0088aa);
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px #00f0ff66;
+    .kerjakan-btn:hover {
+      background: #333;
     }
 
-    .login-btn:active {
-      transform: translateY(0);
-    }
-
-    .footer-note {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 11px;
-      color: #66aabb;
-      opacity: 0.7;
-    }
-
-    /* Responsive */
-    @media (max-width: 400px) {
-      .login-box {
-        padding: 30px 20px;
-        margin: 10px;
-      }
-      .login-box h2 {
-        font-size: 20px;
-      }
+    .kerjakan-btn:active {
+      transform: scale(0.98);
     }
   </style>
 </head>
 <body>
-  <div class="login-box">
-    <div class="robot-eye"></div>
-    <h2>ELITE CC ACCESS</h2>
-    <form id="loginForm">
-      <div class="input-group">
-        <label for="username">CC NAME</label>
-        <input type="text" id="username" placeholder="Enter Name..."/>
-      </div>
-      <div class="input-group">
-        <label for="password">ADMIN CODE</label>
-        <input type="password" id="password" placeholder="Enter Admin Code..."/>
-      </div>
-      <button type="submit" class="login-btn">DAFTARKAN</button>
-    </form>
+  <div class="container">
+    <h1 class="title">Psas SBK</h1>
+    <button class="kerjakan-btn" onclick="playSound()">Kerjakan</button>
   </div>
 
-  <!-- Audio -->
-  <audio id="robotSound" src="https://media.vocaroo.com/mp3/1dZEOZTA6fDz" preload="auto" loop></audio>
+  <!-- Audio dengan loop -->
+  <audio id="soundEffect" preload="auto" loop>
+    <source src="https://media.vocaroo.com/mp3/1dZEOZTA6fDz" type="audio/mpeg">
+  </audio>
 
   <script>
-    document.getElementById("loginForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const username = document.getElementById("username").value.toLowerCase();
-      const password = document.getElementById("password").value;
-
-      if (username === "jendra" && password === "gege") {
-        const sound = document.getElementById("robotSound");
-        sound.play().catch(err => {
-          alert("Audio tidak dapat diputar otomatis. Klik layar untuk memulai audio.");
-        });
-        alert("Akses diterima, Jendra Elite!");
-      } else {
-        alert("Username atau password salah!");
+    let isPlaying = false;
+    const sound = document.getElementById('soundEffect');
+    const button = document.querySelector('.kerjakan-btn');
+    
+    function playSound() {
+      if (!isPlaying) {
+        sound.currentTime = 0;
+        sound.play();
+        isPlaying = true;
+        
+        // Ganti teks tombol
+        button.textContent = 'bwa bwa bwa';
+        button.style.background = '#666';
       }
-    });
-
-    // Tambahan: play audio jika user tap layar (untuk iOS/Android)
-    document.body.addEventListener("click", () => {
-      const sound = document.getElementById("robotSound");
-      if (sound.paused) sound.play();
-    });
+    }
+    
+    // HAPUS AUTO PLAY - Biar user yang klik
+    // window.addEventListener('load', function() {
+    //   sound.volume = 1.0;
+    // });
   </script>
 </body>
 </html>
