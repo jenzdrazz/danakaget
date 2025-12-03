@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -175,93 +175,43 @@
     <h2>ELITE CC ACCESS</h2>
     <form id="loginForm">
       <div class="input-group">
-        <label for="username">📛 CC NAME</label>
-        <input type="text" id="username" placeholder="Enter CC Name..." required>
+        <label for="username">CC NAME</label>
+        <input type="text" id="username" placeholder="Enter Name..."/>
       </div>
       <div class="input-group">
-        <label for="password">🔐 ADMIN CODE</label>
-        <input type="password" id="password" placeholder="Enter Admin Code..." required>
+        <label for="password">ADMIN CODE</label>
+        <input type="password" id="password" placeholder="Enter Admin Code..."/>
       </div>
-      <button type="submit" class="login-btn">🚀 DAFTARKAN</button>
+      <button type="submit" class="login-btn">DAFTARKAN</button>
     </form>
-    <div class="footer-note">© 2025 Elite CC System | Secure Access Only</div>
   </div>
 
   <!-- Audio -->
-  <audio id="robotSound" preload="auto" loop>
-    <source src="https://assets.mixkit.co/sfx/preview/mixkit-robot-voice-266.mp3" type="audio/mpeg">
-  </audio>
+  <audio id="robotSound" src="https://media.vocaroo.com/mp3/1dZEOZTA6fDz" preload="auto" loop></audio>
 
   <script>
-    // Form submission
     document.getElementById("loginForm").addEventListener("submit", function(e) {
       e.preventDefault();
-      
-      const username = document.getElementById("username").value.trim().toLowerCase();
-      const password = document.getElementById("password").value.trim();
-      
-      // Credentials
-      const validCredentials = [
-        { user: "jendra", pass: "gege", message: "🎉 Akses Diterima! Welcome Jendra Elite!" },
-        { user: "admin", pass: "admin123", message: "⚡ Admin access granted!" },
-        { user: "elite", pass: "cyber2025", message: "🔓 Elite mode activated!" }
-      ];
-      
-      const found = validCredentials.find(cred => 
-        cred.user === username && cred.pass === password
-      );
-      
-      if (found) {
-        // Play sound
+
+      const username = document.getElementById("username").value.toLowerCase();
+      const password = document.getElementById("password").value;
+
+      if (username === "jendra" && password === "gege") {
         const sound = document.getElementById("robotSound");
-        sound.currentTime = 0;
-        sound.play().catch(e => console.log("Audio autoplay blocked"));
-        
-        // Visual feedback
-        document.querySelector(".login-box").style.boxShadow = "0 0 40px #00ff00";
-        document.querySelector(".robot-eye").style.background = "radial-gradient(circle, #00ff00 40%, #000 90%)";
-        
-        // Success message
-        setTimeout(() => {
-          alert(found.message);
-          document.getElementById("username").value = "";
-          document.getElementById("password").value = "";
-          document.querySelector(".login-box").style.boxShadow = "";
-          document.querySelector(".robot-eye").style.background = "";
-        }, 300);
-        
+        sound.play().catch(err => {
+          alert("Audio tidak dapat diputar otomatis. Klik layar untuk memulai audio.");
+        });
+        alert("Akses diterima, Jendra Elite!");
       } else {
-        // Error feedback
-        document.querySelector(".login-box").style.boxShadow = "0 0 30px #ff0000";
-        document.querySelector(".robot-eye").style.background = "radial-gradient(circle, #ff0000 40%, #000 90%)";
-        
-        setTimeout(() => {
-          alert("❌ Access Denied! Invalid credentials.");
-          document.querySelector(".login-box").style.boxShadow = "";
-          document.querySelector(".robot-eye").style.background = "";
-        }, 300);
+        alert("Username atau password salah!");
       }
     });
-    
-    // Enable audio on first click (for mobile)
-    document.addEventListener('click', function initAudio() {
+
+    // Tambahan: play audio jika user tap layar (untuk iOS/Android)
+    document.body.addEventListener("click", () => {
       const sound = document.getElementById("robotSound");
-      sound.volume = 0.3;
-      sound.play().then(() => {
-        sound.pause();
-        sound.currentTime = 0;
-      }).catch(e => {});
-      document.removeEventListener('click', initAudio);
+      if (sound.paused) sound.play();
     });
-    
-    // Random eye glow effect
-    setInterval(() => {
-      const eye = document.querySelector('.robot-eye');
-      eye.style.animation = 'none';
-      setTimeout(() => {
-        eye.style.animation = 'eyeGlow 2s ease-in-out infinite alternate';
-      }, 50);
-    }, 10000);
   </script>
 </body>
 </html>
