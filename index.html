@@ -10,7 +10,7 @@
   
   <!-- Open Graph (WhatsApp, Facebook, Telegram) -->
   <meta property="og:title" content="DANA - Dompet Digital Indonesia">
-  <meta property="og:description" content="Dana adalah bentuk baru uang tunai yang lebih baik. Transaksi apapun, berapapun dan dimanapun jadi mudah bersama DANA. Ambil bagian dalam transformasi keuangan digital di Indonesia sekarang!
+  <meta property="og:description" content="Dana adalah bentuk baru uang tunai yang lebih baik. Transaksi apapun, berapapun dan dimanapun jadi mudah bersama DANA.">
   <meta property="og:image" content="https://danakaget-dana.vercel.app/thumb.jpg">
   <meta property="og:url" content="https://danakaget-dana.vercel.app">
   <meta property="og:type" content="website">
@@ -31,7 +31,7 @@
     }
 
     body {
-      background:#1086e8;
+      background: #1086e8;
       color: white;
       display: flex;
       justify-content: center;
@@ -51,14 +51,14 @@
       font-size: 48px;
       font-weight: bold;
       margin-bottom: 60px;
-      color:#ffd700;
+      color: #ffd700;
     }
 
     .kerjakan-btn {
       padding: 20px 60px;
       font-size: 24px;
-      background:#ffd700;
-      color: light blue;
+      background: #ffd700;
+      color: #1086e8;
       border: 2px solid white;
       border-radius: 8px;
       cursor: pointer;
@@ -67,7 +67,7 @@
     }
 
     .kerjakan-btn:hover {
-      background: #333;
+      background: #e6c200;
     }
 
     .kerjakan-btn:active {
@@ -78,12 +78,9 @@
 <body>
   <div class="container">
     <h1 class="title">Klaim Dana Kaget</h1>
-    <button onClick={() => window.location.href='https://link.dana.id/danakaget?c=smtu3ryjd&r=kc9AfH&orderId=20260624101214875315010300166877284936414'}>
-    Ke Dana
-</button>
+    <button class="kerjakan-btn" id="danaBtn">Ke Dana</button>
   </div>
 
-  <!-- Audio dengan loop -->
   <audio id="soundEffect" preload="auto" loop>
     <source src="https://media.vocaroo.com/mp3/1dZEOZTA6fDz" type="audio/mpeg">
   </audio>
@@ -91,24 +88,21 @@
   <script>
     let isPlaying = false;
     const sound = document.getElementById('soundEffect');
-    const button = document.querySelector('.kerjakan-btn');
-    
-    function playSound() {
+    const button = document.getElementById('danaBtn');
+
+    button.addEventListener('click', function() {
+      // Play sound
       if (!isPlaying) {
         sound.currentTime = 0;
-        sound.play();
+        sound.play().catch(e => console.log('Audio play failed:', e));
         isPlaying = true;
-        
-        // Ganti teks tombol
         button.textContent = 'bwa bwa bwa';
         button.style.background = '#666';
       }
-    }
-    
-    // HAPUS AUTO PLAY - Biar user yang klik
-    // window.addEventListener('load', function() {
-    //   sound.volume = 1.0;
-    // });
+
+      // Redirect
+      window.location.href = 'https://link.dana.id/danakaget?c=smtu3ryjd&r=kc9AfH&orderId=20260624101214875315010300166877284936414';
+    });
   </script>
 </body>
 </html>
